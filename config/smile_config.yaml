@@ -10,7 +10,7 @@ model:
   dropout: 0.1
 
 data:
-  data_root: ./smile_data
+  data_root: ./data/USPTO_480K
   batch_size: 128
 
 training:

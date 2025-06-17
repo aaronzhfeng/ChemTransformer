@@ -102,13 +102,13 @@ def process_dataset(file_path, approach, use_amount=False, use_temperature=False
     return processed_data
 
 if __name__ == '__main__':
-    file_path = '../../reactions_unique.csv'
+    file_path = '../data/reactions_unique.csv'
     approach = 'smile' # choose from selfies or smile
     processed_data = process_dataset(file_path, approach=approach)
 
     # save data
     processed_df = pd.DataFrame(processed_data)
-    processed_df.to_parquet(f'./smile_data/{approach}_events.parquet', index=False)
+    processed_df.to_parquet(f'./data/USPTO_480K/{approach}_events.parquet', index=False)
     print(len(processed_df), 'Rows Tokenized')
     print('Input Sequence Length Average:', processed_df['x'].str.len().mean())
     print('Input Sequence Length Median:', processed_df['x'].str.len().median())
