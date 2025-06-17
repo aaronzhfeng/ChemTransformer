@@ -7,7 +7,7 @@ import pickle
 
 MAX_SEQ_LENGTH = 300
 MAX_TGT_LENGTH = 150
-data_root = './smile_data'
+data_root = './data/USPTO_480K'
 event_csv_path = os.path.join(data_root, 'smile_events.parquet')
 
 dictionary_path = os.path.join(data_root, './dictionary.pkl')
